@@ -9,8 +9,7 @@ import SwiftUI
 
 struct HomeScreen: View {
     var body: some View {
-        Text("home screen view")
-            .font(.system(size: 40))
+        TopSellingView()
         
     }
 }

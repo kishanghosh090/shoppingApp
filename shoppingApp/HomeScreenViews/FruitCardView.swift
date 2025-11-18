@@ -1,0 +1,42 @@
+//
+//  FruitCardView.swift
+//  shoppingApp
+//
+//  Created by kishan rana ghosh on 18/11/25.
+//
+
+import SwiftUI
+let images: FruitModel = FruitModel(id: 1, title: .apple, image: "apple", price: "3.3", color: "1")
+struct FruitCardView: View {
+    let fruits: FruitModel
+    var body: some View {
+        ZStack{
+            VStack(alignment: .leading){
+                Text(fruits.title.rawValue)
+                    .fontWeight(.bold)
+                    .font(.system(.title3))
+                    .foregroundStyle(Color.black)
+                Text(fruits.price)
+                    .font(.system(.title3))
+                    .foregroundStyle(.black.opacity(0.7))
+                Spacer()
+            }
+            .padding()
+            .frame(width: 175, height: 150, alignment: .center)
+            .background(Color(fruits.color))
+            .cornerRadius(25)
+            ZStack{
+                Image(fruits.image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 150, height: 110)
+            }
+            .offset(y: 50)
+        }
+        .frame(width: 175, height: 250, alignment: .center)
+        .shadow(color: .gray, radius: 5,x: 3,y: 5)
+    }
+}
+#Preview {
+    FruitCardView(fruits: images)
+}
