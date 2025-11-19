@@ -6,11 +6,11 @@
 //
 
 import Foundation
-struct PlacesMode{
+struct PlacesModel{
     var id: Int
     var name: String
     var time: String
-    var ratig: String
+    var rating: String
     var image: String
     
 }

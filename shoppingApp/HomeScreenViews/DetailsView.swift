@@ -56,6 +56,7 @@ struct DetailsView: View {
                 .clipShape(RoundenedCornerShape.init(corders: [.bottomLeft, .bottomRight], radius: 50))
 //                .frame(width: .infinity, height: .infinity, alignment: .top)
                 .frame(alignment: .topLeading)
+                .edgesIgnoringSafeArea(.all)
                 .shadow(color: .gray, radius: 5, x: 5, y: 5)
                 .overlay(
                     Image("\(fruit.rawValue)")
